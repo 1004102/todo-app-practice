@@ -38,7 +38,8 @@ public class User extends Timestamped {
     @Enumerated(value = EnumType.STRING)
     private UserStatus status;
 
-    @ElementCollection
+    // 패스워드 리스트 저장
+    @ElementCollection  // 컬렉션 필드 정의
     private List<String> passwordList = new LinkedList<>();
 
     private static final int PASSWORD_LENGTH = 3;
@@ -51,6 +52,7 @@ public class User extends Timestamped {
         this.status = status;
     }
 
+    // 암호화된 패스워드를 사용하여 패스워드 리스트 필드를 설정
     public void encryptionPassword(String encryptionPassword) {
         this.password = encryptionPassword;
 
@@ -67,10 +69,6 @@ public class User extends Timestamped {
 
     public void updateStatus(UserStatus status) {
         this.status = status;
-    }
-
-    public void updateName(String name) {
-        this.name = name;
     }
 
     public void updateUserRole(UserRole role) {

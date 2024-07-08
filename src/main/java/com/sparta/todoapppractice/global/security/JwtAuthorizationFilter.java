@@ -33,6 +33,7 @@ public class JwtAuthorizationFilter extends OncePerRequestFilter {
         this.securityResponse = securityResponse;
     }
 
+    // 인증된 사용자에 대한 요청 처리, 토큰 검증
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
 

@@ -7,7 +7,6 @@ import com.sparta.todoapppractice.domain.user.entity.UserRole;
 import com.sparta.todoapppractice.domain.user.entity.UserStatus;
 import com.sparta.todoapppractice.domain.user.repository.UserRepository;
 import com.sparta.todoapppractice.domain.user.security.UserDetailsImpl;
-import com.sparta.todoapppractice.global.dto.DataResponse;
 import com.sparta.todoapppractice.global.dto.MessageResponse;
 import com.sparta.todoapppractice.global.exception.BadRequestException;
 import com.sparta.todoapppractice.global.exception.NotFoundException;
@@ -25,8 +24,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
-
-import java.util.List;
 
 @Service
 public class UserService {

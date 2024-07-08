@@ -64,7 +64,7 @@ public class SecurityConfig {
         http.csrf( (csrf) -> csrf.disable());
 
         http.sessionManagement( (sessionManagement) -> sessionManagement.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-                .authorizeHttpRequests( (authorizeHttpRequests) -> authorizeHttpRequests
+                .authorizeHttpRequests( (authorizeHttpRequests) -> authorizeHttpRequests    // 권한 설정
                         .requestMatchers(PathRequest.toStaticResources().atCommonLocations()).permitAll()
                         .requestMatchers("/api/users/signup", "/api/users/token/refresh").permitAll()
                         .requestMatchers(HttpMethod.GET, "/api/reviews/*", "/api/admin/stores/*").permitAll()
