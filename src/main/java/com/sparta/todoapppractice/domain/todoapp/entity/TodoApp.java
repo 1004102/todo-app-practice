@@ -22,7 +22,13 @@ public class TodoApp {
 
     private String content;
 
-    public TodoApp(TodoAppRequestDto requestDto) {
+    public TodoApp(User user, TodoAppRequestDto requestDto) {
+        this.user = user;
+        this.content = requestDto.getContent();
+    }
+
+    public void updateTodoApp (User user, TodoAppRequestDto requestDto) {
+        this.user = user;
         this.content = requestDto.getContent();
     }
 }
